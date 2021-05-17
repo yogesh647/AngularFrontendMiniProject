@@ -1,0 +1,22 @@
+<h1 class="text-center">Login User Form</h1>
+<div class="center">
+<form [formGroup]="loginForm" (ngSubmit)="userlogin()">
+
+    
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="email" class="form-control" formControlName="email"/>
+      <label class="form-label" >Email</label>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input type="password" id="password" class="form-control" formControlName="password"/>
+      <label class="form-label" >Password</label>
+    </div>
+    <!-- Submit button -->
+    <div class="text-center">
+    <button type="submit" class="btn btn-primary btn-block" [disabled]="!loginForm.valid">Login</button>
+    </div>  
+</form>
+</div>
